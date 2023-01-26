@@ -59,7 +59,7 @@ function Bugfinder() {
             value={bugInput}
             onChange={(e) => setbuginput(e.target.value)}
             className=" h-40 py-2 px-4 rounded-lg 
-        shadow-xl text-2xl bg-base-100  text-white w-full"
+        shadow-xl text-2xl bg-base-100   w-full"
           />
         </center>
         <br></br>
@@ -74,7 +74,7 @@ function Bugfinder() {
           <input
             type="submit"
             value="Generate shell command"
-            className="ml-4 py-2 px-4 bg-green-500 text-white rounded-lg hover:bg-green-600"
+            className="ml-4 py-2 px-4 bg-green-500  rounded-lg hover:bg-green-600"
           />
         </div>{" "}
       </form>

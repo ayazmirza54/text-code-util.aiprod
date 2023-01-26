@@ -59,7 +59,7 @@ function Shellcommandgen() {
             value={cmdInput}
             onChange={(e) => setcmdinput(e.target.value)}
             className=" h-40 py-2 px-4 rounded-lg 
-        md:w-3/4 sm:w-full shadow-xl text-2xl bg-base-100  text-white "
+        md:w-3/4 sm:w-full shadow-xl text-2xl bg-base-100   "
           />
         </center>
         <br></br>
@@ -74,7 +74,7 @@ function Shellcommandgen() {
           <input
             type="submit"
             value="Generate shell command"
-            className="ml-4 py-2 px-4 bg-green-500 text-white rounded-lg hover:bg-green-600"
+            className="ml-4 py-2 px-4 bg-green-500  rounded-lg hover:bg-green-600"
           />
         </div>{" "}
       </form>
