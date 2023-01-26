@@ -18,7 +18,7 @@ function Tools() {
             {" "}
             <img
               className="svg-styles w-14 h-14 rounded-md"
-              src="../../public/assets/article-writer.svg"
+              src="../../assets/article-writer.svg"
             ></img>
             <h2 className="text-xl">AI text summarizer</h2>
           </div>
@@ -28,7 +28,7 @@ function Tools() {
             {" "}
             <img
               className="svg-styles w-14 h-14 rounded-md"
-              src="../../public/assets/article.svg"
+              src="../../assets/article.svg"
             ></img>
             <h2 className="text-xl">AI article generator</h2>
           </div>
@@ -38,7 +38,7 @@ function Tools() {
             {" "}
             <img
               className="svg-styles w-14 h-14 rounded-md"
-              src="../../public/assets/shell.svg"
+              src="../../assets/shell.svg"
             ></img>
             <h2 className="text-xl">Shell command generator</h2>
           </div>
@@ -48,7 +48,7 @@ function Tools() {
             {" "}
             <img
               className="svg-styles w-14 h-14 rounded-md"
-              src="../../public/assets/code-green.svg"
+              src="../../assets/code-green.svg"
             ></img>
             <h2 className="text-xl">Code Explainer</h2>
           </div>
@@ -58,7 +58,7 @@ function Tools() {
             {" "}
             <img
               className="svg-styles w-14 h-14 rounded-md"
-              src="../../public/assets/bug-fix.svg"
+              src="../../assets/bug-fix.svg"
             ></img>
             <h2 className="text-xl">Bug Finder</h2>
           </div>
@@ -68,7 +68,7 @@ function Tools() {
             {" "}
             <img
               className="svg-styles w-14 h-14 rounded-md"
-              src="../../public/assets/article-writer.svg"
+              src="../../assets/article-writer.svg"
             ></img>
             <h2 className="text-xl">Ideas generator</h2>
           </div>
@@ -78,7 +78,7 @@ function Tools() {
             {" "}
             <img
               className="svg-styles w-14 h-14 rounded-md"
-              src="../../public/assets/ideas.svg"
+              src="../../assets/ideas.svg"
             ></img>
             <h2 className="text-xl">Any text to simple Words</h2>
           </div>
@@ -88,7 +88,7 @@ function Tools() {
             {" "}
             <img
               className="svg-styles w-14 h-14 rounded-md"
-              src="../../public/assets/code.svg"
+              src="../../assets/code.svg"
             ></img>
             <h2 className="text-xl">Text to SQL Query</h2>
           </div>

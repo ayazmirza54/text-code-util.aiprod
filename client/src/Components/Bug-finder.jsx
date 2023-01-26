@@ -43,7 +43,7 @@ function Bugfinder() {
       <div className="flex justify-center gap-8">
         <img
           className="svg-styles w-14 h-14 rounded-md"
-          src="../../public/assets/bug-fix.svg"
+          src="../../assets/bug-fix.svg"
         ></img>
         <h2 className="text-xl">Bug finder</h2>
       </div>
@@ -69,7 +69,7 @@ function Bugfinder() {
           {" "}
           <img
             className="svg-styles w-14 h-14 rounded-md"
-            src="../../public/assets/robot-svgrepo-com.svg"
+            src="../../assets/robot-svgrepo-com.svg"
           ></img>
           <input
             type="submit"

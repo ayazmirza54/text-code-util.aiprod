@@ -43,7 +43,7 @@ function Articlewriter() {
       <div className="flex justify-center gap-8">
         <img
           className="svg-styles w-14 h-14 rounded-md"
-          src="../../public/assets/article-writer.svg"
+          src="../../assets/article-writer.svg"
         ></img>
         <h2 className="text-xl">Any topic to an article</h2>
       </div>
@@ -69,7 +69,7 @@ function Articlewriter() {
           {" "}
           <img
             className="svg-styles w-14 h-14 rounded-md"
-            src="../../public/assets/robot-svgrepo-com.svg"
+            src="../../assets/robot-svgrepo-com.svg"
           ></img>
           <input
             type="submit"

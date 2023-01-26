@@ -43,7 +43,7 @@ function Simplegen() {
       <div className="flex justify-center gap-8">
         <img
           className="svg-styles w-14 h-14 rounded-md"
-          src="../../public/assets/ideas.svg"
+          src="../../assets/ideas.svg"
         ></img>
         <h2 className="text-xl">Any text to simple Words</h2>
       </div>
@@ -69,7 +69,7 @@ function Simplegen() {
           {" "}
           <img
             className="svg-styles w-14 h-14 rounded-md"
-            src="../../public/assets/robot-svgrepo-com.svg"
+            src="../../assets/robot-svgrepo-com.svg"
           ></img>
           <input
             type="submit"

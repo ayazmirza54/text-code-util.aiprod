@@ -7,7 +7,7 @@ function Hero() {
     <div className="hero w-full mt-20">
       <div className="hero-content flex flex-col md:flex-row-reverse">
         <img
-          src="../../public/assets/ai-hero-pic.png"
+          src="../../assets/ai-hero-pic.png"
           className="max-w-sm rounded-xl shadow-lg md:w-1/2"
         />
         <div className="sm:ml-10 content">
