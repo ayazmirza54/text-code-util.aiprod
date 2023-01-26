@@ -74,7 +74,7 @@ function Articlewriter() {
           <input
             type="submit"
             value="Generate article"
-            className="ml-4 py-2 px-4 bg-green-500  rounded-lg hover:bg-green-600"
+            className="ml-4 py-2 px-4 rounded-lg bg-black"
           />
         </div>{" "}
       </form>
