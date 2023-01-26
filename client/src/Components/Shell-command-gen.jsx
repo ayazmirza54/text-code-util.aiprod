@@ -9,13 +9,16 @@ function Shellcommandgen() {
   async function handlesubmit(event) {
     event.preventDefault();
     try {
-      const response = await fetch("https://http-nodejs-production-be9b.up.railway.app/shell-command-gen", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ cmd: cmdInput }),
-      });
+      const response = await fetch(
+        "https://http-nodejs-production-be9b.up.railway.app/shell-command-gen",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ cmd: cmdInput }),
+        }
+      );
 
       const data = await response.json();
       if (response.status !== 200) {
@@ -36,6 +39,7 @@ function Shellcommandgen() {
 
   return (
     <>
+      <br></br>
       <div className="flex justify-center gap-8">
         <img
           className="svg-styles w-14 h-14 rounded-md"

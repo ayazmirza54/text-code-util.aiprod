@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 
 function Codeexp() {
@@ -9,13 +8,16 @@ function Codeexp() {
   async function handlesubmit(event) {
     event.preventDefault();
     try {
-      const response = await fetch("https://http-nodejs-production-be9b.up.railway.app/code-gen", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ code: codeInput }),
-      });
+      const response = await fetch(
+        "https://http-nodejs-production-be9b.up.railway.app/code-gen",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ code: codeInput }),
+        }
+      );
 
       const data = await response.json();
       if (response.status !== 200) {
@@ -34,10 +36,9 @@ function Codeexp() {
     }
   }
 
- 
- 
   return (
     <>
+      <br></br>
       <div className="flex justify-center gap-8">
         <img
           className="svg-styles w-14 h-14 rounded-md"
@@ -47,16 +48,19 @@ function Codeexp() {
       </div>
       <br></br>
       <br></br>
-      <form onSubmit={handlesubmit} >
-      <center>  <input
-          type="text"
-          name="code"
-          placeholder="Enter a code to get its explanation"
-          value={codeInput}
-          onChange={(e) => setcodeinput(e.target.value)}
-          className="h-40 py-2 px-4 rounded-lg 
+      <form onSubmit={handlesubmit}>
+        <center>
+          {" "}
+          <input
+            type="text"
+            name="code"
+            placeholder="Enter a code to get its explanation"
+            value={codeInput}
+            onChange={(e) => setcodeinput(e.target.value)}
+            className="h-40 py-2 px-4 rounded-lg 
          shadow-xl text-2xl bg-base-100  text-white sm:w-full md:w-3/4 "
-        /></center>
+          />
+        </center>
         <br></br>
         <br></br>
         <br></br>
@@ -75,24 +79,19 @@ function Codeexp() {
       </form>
       <br></br>
       <br></br>
-     <div className="flex items-center justify-center self-center">
-  <div className="mx-auto my-auto"><div className="card-body">
-    <h2 className="card-title">Response from AI</h2>
-    
-    <div className="card-actions ">
-     <div className="p-5 mockup-code font-mono">
-      
-      {result}
-         </div>
-         </div>
+      <div className="flex items-center justify-center self-center">
+        <div className="mx-auto my-auto">
+          <div className="card-body">
+            <h2 className="card-title">Response from AI</h2>
 
-    </div>
-  </div>
-</div>
-
-   
+            <div className="card-actions ">
+              <div className="p-5 mockup-code font-mono">{result}</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
-  )
+  );
 }
 
-export default Codeexp
+export default Codeexp;

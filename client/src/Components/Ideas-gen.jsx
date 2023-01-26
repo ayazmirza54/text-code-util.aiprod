@@ -9,13 +9,16 @@ function Ideasgen() {
   async function handlesubmit(event) {
     event.preventDefault();
     try {
-      const response = await fetch("https://http-nodejs-production-be9b.up.railway.app/idea-gen", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ idea: ideaInput }),
-      });
+      const response = await fetch(
+        "https://http-nodejs-production-be9b.up.railway.app/idea-gen",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ idea: ideaInput }),
+        }
+      );
 
       const data = await response.json();
       if (response.status !== 200) {
@@ -36,6 +39,7 @@ function Ideasgen() {
 
   return (
     <>
+      <br></br>
       <div className="flex justify-center gap-8">
         <img
           className="svg-styles w-14 h-14 rounded-md"
@@ -78,13 +82,13 @@ function Ideasgen() {
       <br></br>
       <center>
         {" "}
-        <div className="card w-1/2 text-2xl flex flex-auto justify-center bg-base-100 shadow-xl">
+        <div className="card w-full text-2xl flex justify-start bg-base-100 shadow-xl">
           <div className="card-body">
             <h2 className="card-title">Response from AI</h2>
 
             <div className="card-actions">
-              <div className="overflow-auto">
-                <pre>{result}</pre>
+              <div className="">
+                <code>{result}</code>
               </div>
             </div>
           </div>

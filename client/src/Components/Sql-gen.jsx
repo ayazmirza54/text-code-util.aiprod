@@ -8,13 +8,16 @@ function Sqlgen() {
   async function handlesubmit(event) {
     event.preventDefault();
     try {
-      const response = await fetch("https://http-nodejs-production-be9b.up.railway.app/sql-gen", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ sql: sqlInput }),
-      });
+      const response = await fetch(
+        "https://http-nodejs-production-be9b.up.railway.app/sql-gen",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ sql: sqlInput }),
+        }
+      );
 
       const data = await response.json();
       if (response.status !== 200) {
@@ -35,6 +38,7 @@ function Sqlgen() {
 
   return (
     <>
+      <br></br>
       <div className="flex justify-center gap-8">
         <img
           className="svg-styles w-14 h-14 rounded-md"
