@@ -43,7 +43,7 @@ function Ideasgen() {
       <div className="flex justify-center gap-8">
         <img
           className="svg-styles w-14 h-14 rounded-md"
-          src="../../src/assets/ideas.svg"
+          src="../../public/assets/ideas.svg"
         ></img>
         <h2 className="text-xl">Ideas generator</h2>
       </div>
@@ -69,7 +69,7 @@ function Ideasgen() {
           {" "}
           <img
             className="svg-styles w-14 h-14 rounded-md"
-            src="../../src/assets/robot-svgrepo-com.svg"
+            src="../../public/assets/robot-svgrepo-com.svg"
           ></img>
           <input
             type="submit"

@@ -42,7 +42,7 @@ function Codeexp() {
       <div className="flex justify-center gap-8">
         <img
           className="svg-styles w-14 h-14 rounded-md"
-          src="../../src/assets/code-green.svg"
+          src="../../public/assets/code-green.svg"
         ></img>
         <h2 className="text-xl">Code Explainer</h2>
       </div>
@@ -68,7 +68,7 @@ function Codeexp() {
           {" "}
           <img
             className="svg-styles w-14 h-14 rounded-md"
-            src="../../src/assets/robot-svgrepo-com.svg"
+            src="../../public/assets/robot-svgrepo-com.svg"
           ></img>
           <input
             type="submit"

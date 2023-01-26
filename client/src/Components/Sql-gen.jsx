@@ -42,7 +42,7 @@ function Sqlgen() {
       <div className="flex justify-center gap-8">
         <img
           className="svg-styles w-14 h-14 rounded-md"
-          src="../../src/assets/code.svg"
+          src="../../public/assets/code.svg"
         ></img>
         <h2 className="text-xl">Shell command generator</h2>
       </div>
@@ -68,7 +68,7 @@ function Sqlgen() {
           {" "}
           <img
             className="svg-styles w-14 h-14 rounded-md"
-            src="../../src/assets/robot-svgrepo-com.svg"
+            src="../../public/assets/robot-svgrepo-com.svg"
           ></img>
           <input
             type="submit"
