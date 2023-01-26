@@ -9,7 +9,7 @@ function Codeexp() {
   async function handlesubmit(event) {
     event.preventDefault();
     try {
-      const response = await fetch("http://localhost:3080/code-gen", {
+      const response = await fetch("https://http-nodejs-production-be9b.up.railway.app/code-gen", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -9,7 +9,7 @@ function Tldr() {
   async function handlesubmit(event) {
     event.preventDefault();
     try {
-      const response = await fetch("http://localhost:3080/tldr-gen", {
+      const response = await fetch("https://http-nodejs-production-be9b.up.railway.app/tldr-gen", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

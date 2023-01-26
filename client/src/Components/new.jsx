@@ -21,7 +21,7 @@ function App() {
 
   const handleWordSubmit = async event => {
     event.preventDefault();
-    const res = await fetch('http://localhost:3080/app1', {
+    const res = await fetch('https://http-nodejs-production-be9b.up.railway.app/app1', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ word: word }),
@@ -32,7 +32,7 @@ function App() {
 
   const handleCmdSubmit = async event => {
     event.preventDefault();
-    const res = await fetch('http://localhost:3080/app2', {
+    const res = await fetch('https://http-nodejs-production-be9b.up.railway.app/app2', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ cmd: cmd }),
