@@ -9,7 +9,7 @@ function Sqlgen() {
     event.preventDefault();
     try {
       const response = await fetch(
-        "https://http-nodejs-production-be9b.up.railway.app/sql-gen",
+        "https://http-nodejs-production-2379.up.railway.app/sql-gen",
         {
           method: "POST",
           headers: {

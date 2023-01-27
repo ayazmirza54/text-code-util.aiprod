@@ -10,7 +10,7 @@ function Shellcommandgen() {
     event.preventDefault();
     try {
       const response = await fetch(
-        "https://http-nodejs-production-be9b.up.railway.app/shell-command-gen",
+        "https://http-nodejs-production-2379.up.railway.app/shell-command-gen",
         {
           method: "POST",
           headers: {
