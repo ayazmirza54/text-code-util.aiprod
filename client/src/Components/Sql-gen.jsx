@@ -58,7 +58,7 @@ function Sqlgen() {
             value={sqlInput}
             onChange={(e) => setsqlinput(e.target.value)}
             className=" h-40 py-2 px-4 rounded-lg 
-        md:w-3/4 sm:w-full shadow-xl text-2xl bg-base-100   "
+        md:w-3/4 sm:w-full shadow-xl text-2xl text-white bg-black "
           />
         </center>
         <br></br>

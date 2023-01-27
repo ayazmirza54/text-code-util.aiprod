@@ -59,7 +59,7 @@ function Bugfinder() {
             value={bugInput}
             onChange={(e) => setbuginput(e.target.value)}
             className=" h-40 py-2 px-4 rounded-lg 
-        shadow-xl text-2xl bg-base-100   w-full"
+        shadow-xl text-white bg-black w-full"
           />
         </center>
         <br></br>

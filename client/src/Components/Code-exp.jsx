@@ -58,7 +58,7 @@ function Codeexp() {
             value={codeInput}
             onChange={(e) => setcodeinput(e.target.value)}
             className="h-40 py-2 px-4 rounded-lg 
-         shadow-xl text-2xl bg-base-100   sm:w-full md:w-3/4 "
+         shadow-xl text-2xl text-white bg-black sm:w-full md:w-3/4 "
           />
         </center>
         <br></br>
