@@ -59,7 +59,7 @@ function Articlewriter() {
             value={articleInput}
             onChange={(e) => setarticleinput(e.target.value)}
             className=" h-40 py-2 px-4 rounded-lg 
-         shadow-xl text-2xl bg-base-100   w-full"
+         shadow-xl text-2xl bg-base-100 dark:bg-slate-800 text-slate-900 dark:text-white  w-full"
           />
         </center>
         <br></br>
