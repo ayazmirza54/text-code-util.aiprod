@@ -35,6 +35,7 @@ async function getdata() {
     });
     console.log(completion.data.choices[0].text);
     res.status(200).json({ result: completion.data.choices[0].text });
+    console.log(generatesimplewords(word));
   });
 }
 getdata();
@@ -53,12 +54,10 @@ async function getcmd() {
     });
     console.log(completion.data.choices[0].text);
     res.status(200).json({ result: completion.data.choices[0].text });
+    console.log(generatecmd(cmd));
   });
 }
 getcmd();
-
-
-
 
 async function getsql() {
   app.post("/sql-gen", async (req, res) => {
@@ -74,6 +73,7 @@ async function getsql() {
     });
     console.log(completion.data.choices[0].text);
     res.status(200).json({ result: completion.data.choices[0].text });
+    console.log(generatesql(sql))
   });
 }
 getsql();
@@ -92,6 +92,7 @@ async function getidea() {
     });
     console.log(completion.data.choices[0].text);
     res.status(200).json({ result: completion.data.choices[0].text });
+    console.log(generateidea(idea));
   });
 }
 getidea();
@@ -110,6 +111,7 @@ async function gettldr() {
     });
     console.log(completion.data.choices[0].text);
     res.status(200).json({ result: completion.data.choices[0].text });
+    console.log(generatetldr(tldr));
   });
 }
 gettldr();
@@ -119,16 +121,16 @@ async function getbug() {
     const bug = req.body.bug || "";
     const completion = await openai.createCompletion({
       model: "text-davinci-003",
-  prompt: generatebug(bug),
-  temperature: 0,
-  max_tokens: 182,
-  top_p: 1.0,
-  frequency_penalty: 0.0,
-  presence_penalty: 0.0,
-  
+      prompt: generatebug(bug),
+      temperature: 0,
+      max_tokens: 182,
+      top_p: 1.0,
+      frequency_penalty: 0.0,
+      presence_penalty: 0.0,
     });
     console.log(completion.data.choices[0].text);
     res.status(200).json({ result: completion.data.choices[0].text });
+    console.log(generatebug(bug));
   });
 }
 getbug();
@@ -138,16 +140,16 @@ async function getcode() {
     const code = req.body.code || "";
     const completion = await openai.createCompletion({
       model: "text-davinci-003",
-  prompt: generatecode(code),
-  temperature: 0,
-  max_tokens: 182,
-  top_p: 1.0,
-  frequency_penalty: 0.0,
-  presence_penalty: 0.0,
-  
+      prompt: generatecode(code),
+      temperature: 0,
+      max_tokens: 182,
+      top_p: 1.0,
+      frequency_penalty: 0.0,
+      presence_penalty: 0.0,
     });
     console.log(completion.data.choices[0].text);
     res.status(200).json({ result: completion.data.choices[0].text });
+    console.log(generatecode(code));
   });
 }
 getcode();
@@ -157,23 +159,23 @@ async function getarticle() {
     const article = req.body.article || "";
     const completion = await openai.createCompletion({
       model: "text-davinci-003",
-  prompt: generatearticle(article),
-  temperature: 0.7,
+      prompt: generatearticle(article),
+      temperature: 0.7,
       max_tokens: 500,
       top_p: 1.0,
       frequency_penalty: 0.2,
       presence_penalty: 0.0,
-  
     });
     console.log(completion.data.choices[0].text);
     res.status(200).json({ result: completion.data.choices[0].text });
+    console.log(generatearticle(article))
   });
 }
 getarticle();
 
 function generatesimplewords(word) {
   return `Explain the below topic to a second grader ${word}`;
-}
+  }
 function generatecmd(cmd) {
   return `Convert this text to a shell command:  ${cmd}`;
 }
@@ -182,18 +184,20 @@ function generatesql(sql) {
 }
 function generateidea(idea) {
   return `Gereate some ideas around this prompt: ${idea}`;
+ 
 }
-function generatetldr(idea) {
-  return `Sumarize this:  ${idea}`;
-}
-function generatebug(idea) {
-  return `Find bug in this code:  ${idea}`;
+function generatetldr(tldr) {
+  return `Sumarize this:  ${tldr}`;
+  }
+function generatebug(bug) {
+  return `Find bug in this code:  ${bug}`;
 }
 function generatecode(code) {
   return `Explain this code:  ${code}`;
-}
+  }
 function generatearticle(article) {
   return `Generate an article for this topic:  ${article}`;
+  
 }
 
 //create a simple express api
