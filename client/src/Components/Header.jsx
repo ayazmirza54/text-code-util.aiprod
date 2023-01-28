@@ -22,7 +22,7 @@ function Header() {
           <div className="flex items-center justify-end space-x-6 text-xl sm:text-2xl font-mono">
             <a
               className="py-2 px-4 rounded-md sm:py-3 sm:px-6 flex items-center btn-grad"
-              href="https://github.com/ayazmirza54/text-code-utils.ai"
+              href="https://github.com/ayazmirza54/text-code-util.aiprod"
               target="_blank"
             >
               <FaGithub className="mx-2 sm:mx-4"></FaGithub>
