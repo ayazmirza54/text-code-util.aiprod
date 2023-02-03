@@ -11,7 +11,7 @@ import Simplegen from "./Components/Simplegen";
 import Shellcommandgen from "./Components/Shell-command-gen";
 import Tldr from "./Components/Tldr";
 import Sqlgen from "./Components/Sql-gen";
-
+import Footer from "./Components/Footer";
 function App() {
   return (
     <div className="App">
@@ -23,6 +23,7 @@ function App() {
             <>
               <Header />
               <Hero />
+              <Footer />
             </>
           }
         />
@@ -33,6 +34,7 @@ function App() {
             <>
               <Header />
               <Tools />
+              <Footer />
             </>
           }
         />
@@ -43,6 +45,7 @@ function App() {
             <>
               <Header />
               <Articlewriter />
+              <Footer />
             </>
           }
         />
@@ -53,6 +56,7 @@ function App() {
             <>
               <Header />
               <Bugfinder />
+              <Footer />
             </>
           }
         />
@@ -63,6 +67,7 @@ function App() {
             <>
               <Header />
               <Codeexp />
+              <Footer></Footer>
             </>
           }
         />
@@ -73,6 +78,7 @@ function App() {
             <>
               <Header />
               <Ideasgen />
+              <Footer></Footer>
             </>
           }
         />
@@ -84,6 +90,7 @@ function App() {
             <>
               <Header />
               <Shellcommandgen />
+              <Footer></Footer>
             </>
           }
         />
@@ -94,6 +101,7 @@ function App() {
             <>
               <Header />
               <Tldr />
+              <Footer></Footer>
             </>
           }
         />
@@ -104,6 +112,7 @@ function App() {
             <>
               <Header />
               <Sqlgen />
+              <Footer></Footer>
             </>
           }
         />
@@ -114,6 +123,7 @@ function App() {
             <>
               <Header />
               <Simplegen />
+              <Footer></Footer>
             </>
           }
         />
