@@ -73,7 +73,7 @@ function Bugfinder() {
           ></img>
           <input
             type="submit"
-            value="Generate shell command"
+            value="Find out bug in above code"
             className="ml-4 py-2 px-4 bg-green-500  rounded-lg hover:bg-green-600"
           />
         </div>{" "}
