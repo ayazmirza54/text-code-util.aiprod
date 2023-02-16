@@ -33,9 +33,10 @@ async function getdata() {
       frequency_penalty: 0.0,
       presence_penalty: 0.0,
     });
+    console.log(generatesimplewords(word));
     console.log(completion.data.choices[0].text);
     res.status(200).json({ result: completion.data.choices[0].text });
-    console.log(generatesimplewords(word));
+    
   });
 }
 getdata();
@@ -52,9 +53,10 @@ async function getcmd() {
       frequency_penalty: 0.2,
       presence_penalty: 0.0,
     });
+    console.log(generatecmd(cmd));
     console.log(completion.data.choices[0].text);
     res.status(200).json({ result: completion.data.choices[0].text });
-    console.log(generatecmd(cmd));
+    
   });
 }
 getcmd();
@@ -71,9 +73,10 @@ async function getsql() {
       frequency_penalty: 0.0,
       presence_penalty: 0.0,
     });
+    console.log(generatesql(sql))
     console.log(completion.data.choices[0].text);
     res.status(200).json({ result: completion.data.choices[0].text });
-    console.log(generatesql(sql))
+    
   });
 }
 getsql();
@@ -90,9 +93,10 @@ async function getidea() {
       frequency_penalty: 0.2,
       presence_penalty: 0.0,
     });
+    console.log(generateidea(idea));
     console.log(completion.data.choices[0].text);
     res.status(200).json({ result: completion.data.choices[0].text });
-    console.log(generateidea(idea));
+    
   });
 }
 getidea();
@@ -109,9 +113,10 @@ async function gettldr() {
       frequency_penalty: 0.2,
       presence_penalty: 0.0,
     });
+    console.log(generatetldr(tldr));
     console.log(completion.data.choices[0].text);
     res.status(200).json({ result: completion.data.choices[0].text });
-    console.log(generatetldr(tldr));
+    
   });
 }
 gettldr();
@@ -128,9 +133,10 @@ async function getbug() {
       frequency_penalty: 0.0,
       presence_penalty: 0.0,
     });
+    console.log(generatebug(bug));
     console.log(completion.data.choices[0].text);
     res.status(200).json({ result: completion.data.choices[0].text });
-    console.log(generatebug(bug));
+    
   });
 }
 getbug();
@@ -147,9 +153,10 @@ async function getcode() {
       frequency_penalty: 0.0,
       presence_penalty: 0.0,
     });
+    console.log(generatecode(code));
     console.log(completion.data.choices[0].text);
     res.status(200).json({ result: completion.data.choices[0].text });
-    console.log(generatecode(code));
+    
   });
 }
 getcode();
@@ -166,9 +173,10 @@ async function getarticle() {
       frequency_penalty: 0.2,
       presence_penalty: 0.0,
     });
+    console.log(generatearticle(article))
     console.log(completion.data.choices[0].text);
     res.status(200).json({ result: completion.data.choices[0].text });
-    console.log(generatearticle(article))
+    
   });
 }
 getarticle();
