@@ -27,7 +27,7 @@ function Hero() {
               Browse tools
             </button>
           </Link>
-            <a href="https://my-restore-photos-omega.vercel.app/">
+            <a href="https://my-restore-photos-omega.vercel.app/" target="_blank">
               {" "}
               <button className="mx-4 sm:mx-20 btn-grad">
                 <FaFileImage className="mx-2 inline" />
