@@ -82,7 +82,7 @@ function Simplegen() {
       <br></br>
       <center>
         {" "}
-        <div className="card text-2xl flex flex-auto justify-center bg-base-100 shadow-xl">
+        <div className="card text-2xl flex flex-auto justify-center shadow-xl">
           <div className="card-body">
             <h2 className="card-title">Response from AI</h2>
 
