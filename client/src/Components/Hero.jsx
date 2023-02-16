@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Link } from "react-router-dom";
 import { FaTools } from "react-icons/fa";
-
+import { FaFileImage } from "react-icons/fa";
 function Hero() {
   return (
     <div className="hero w-full mt-20">
@@ -27,6 +27,13 @@ function Hero() {
               Browse tools
             </button>
           </Link>
+            <a href="https://my-restore-photos-omega.vercel.app/">
+              {" "}
+              <button className="mx-4 sm:mx-20 btn-grad">
+                <FaFileImage className="mx-2 inline" />
+                Browse img tools
+              </button>
+            </a>
         </div>
       </div>
     </div>
