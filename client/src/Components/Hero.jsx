@@ -34,6 +34,30 @@ function Hero() {
                 Browse img tools
               </button>
             </a>
+            <br></br>
+            <br></br>
+         <center>   <h2>🔥Top tools</h2>
+            <Link to="/sql-gen"className="mx-4 sm:mx-20">
+          <div className="mx-2 inline">
+            {" "}
+            <img
+              className="svg-styles w-14 h-14 rounded-md"
+              src="../../assets/code.svg"
+            ></img><br></br>
+            <h2 className="text-xl">Text to SQL Query</h2>
+          </div>
+        </Link>
+        <Link to="/ideas-gen" className="mx-4 sm:mx-20">
+          <div className="mx-2 inline">
+            {" "}
+            <img
+              className="svg-styles w-14 h-14 rounded-md"
+              src="../../assets/article-writer.svg"
+            ></img>
+            <h2 className="text-xl">Ideas generator</h2>
+          </div>
+        </Link>
+        </center>
         </div>
       </div>
     </div>
