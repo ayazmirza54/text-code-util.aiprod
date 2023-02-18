@@ -36,7 +36,7 @@ function Hero() {
             </a>
             <br></br>
             <br></br>
-         <center>   <h2>🔥Top tools</h2>
+         <center>   <h2>🔥Top tools this week</h2>
             <Link to="/sql-gen"className="mx-4 sm:mx-20">
           <div className="mx-2 inline">
             {" "}
