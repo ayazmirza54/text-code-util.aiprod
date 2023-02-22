@@ -10,7 +10,7 @@ function Tldr() {
     event.preventDefault();
     try {
       const response = await fetch(
-        "https://my-prod-app-production.up.railway.app/tldr-gen",
+        "https://http-nodejs-production-3bb2.up.railway.app/tldr-gen",
         {
           method: "POST",
           headers: {

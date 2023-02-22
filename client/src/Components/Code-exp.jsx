@@ -9,7 +9,7 @@ function Codeexp() {
     event.preventDefault();
     try {
       const response = await fetch(
-        "https://my-prod-app-production.up.railway.app/code-gen",
+        "https://http-nodejs-production-3bb2.up.railway.app/code-gen",
         {
           method: "POST",
           headers: {
