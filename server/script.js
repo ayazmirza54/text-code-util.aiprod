@@ -114,8 +114,8 @@ async function gettldr() {
       presence_penalty: 0.0,
     });
     console.log(generatetldr(tldr));
-    console.log(completion.data.choices[0].message);
-    res.status(200).json({ result: completion.data.choices[0].message });
+    console.log(completion.data.choices[0].message.content);
+    res.status(200).json({ result: completion.data.choices[0].message.content });
     
   });
 }
