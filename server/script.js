@@ -105,8 +105,8 @@ async function gettldr() {
   app.post("/tldr-gen", async (req, res) => {
     const tldr = req.body.tldr || "";
     const completion = await openai.createCompletion({
-      model: "text-davinci-003",
-      prompt: generatetldr(tldr),
+      model: "gpt-3.5-turbo",
+      messages: [{role: "user", content: generatetldr(tldr)}],
       temperature: 0.7,
       max_tokens: 300,
       top_p: 1.0,
