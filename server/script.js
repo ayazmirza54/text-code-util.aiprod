@@ -115,7 +115,7 @@ async function gettldr() {
     });
     console.log(generatetldr(tldr));
     console.log(completion.data.choices[0].text);
-    res.status(200).json({ result: completion.data.choices[0].text });
+    res.status(200).json({ result: completion.data.choices[0].message.content });
     
   });
 }
