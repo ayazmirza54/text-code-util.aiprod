@@ -104,7 +104,7 @@ getidea();
 async function gettldr() {
   app.post("/tldr-gen", async (req, res) => {
     const tldr = req.body.tldr || "";
-    const completion = await openai.createCompletion({
+    const completion = await openai.createChatCompletion({
       model: "gpt-3.5-turbo",
       messages: [{role: "user", content: generatetldr(tldr)}],
       temperature: 0.7,
@@ -115,10 +115,11 @@ async function gettldr() {
     });
     console.log(generatetldr(tldr));
     console.log(completion.data.choices[0].text);
-    res.status(200).json({ result: completion.data.choices[0].message.content });
+    res.status(200).json({ result: completion.data.choices[0].message });
     
   });
 }
+
 gettldr();
 
 async function getbug() {
