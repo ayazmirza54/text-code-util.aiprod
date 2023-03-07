@@ -119,6 +119,7 @@ async function gettldr() {
     
   });
 }
+
 gettldr();
 
 async function getbug() {

@@ -10,7 +10,7 @@ function Articlewriter() {
     event.preventDefault();
     try {
       const response = await fetch(
-        "https://http-nodejs-production-2379.up.railway.app/article-gen",
+        "https://https://http-nodejs-production-2379.up.railway.app/article-gen",
         {
           method: "POST",
           headers: {
@@ -85,7 +85,7 @@ function Articlewriter() {
         <div className="card w-full text-2xl flex flex-auto justify-center shadow-xl">
           <div className="card-body">
             <h2 className="card-title">Response from AI</h2>
-           
+
             <div className="card-actions">
               <div>{result}</div>
             </div>
