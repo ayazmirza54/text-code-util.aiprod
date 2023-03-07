@@ -104,13 +104,18 @@ getidea();
 async function gettldr() {
   app.post("/tldr-gen", async (req, res) => {
     const tldr = req.body.tldr || "";
-    const completion = await openai.createChatCompletion({
-      model: "gpt-3.5-turbo",
-      messages: [{role: "user", content: generatetldr(tldr)}],
+    const completion = await openai.createCompletion({
+      model: "text-davinci-003",
+      prompt: generatetldr(tldr),
+      temperature: 0.7,
+      max_tokens: 300,
+      top_p: 1.0,
+      frequency_penalty: 0.2,
+      presence_penalty: 0.0,
     });
     console.log(generatetldr(tldr));
-    console.log(completion.data.choices[0].message.content);
-    res.status(200).json({ result: completion.data.choices[0].message.content });
+    console.log(completion.data.choices[0].text);
+    res.status(200).json({ result: completion.data.choices[0].text });
     
   });
 }
