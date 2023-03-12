@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter, Link } from "react-router-dom";
 import { FaTools } from "react-icons/fa";
-import { FaFileImage } from "react-icons/fa";
-import walkman from "../assets/walkman.png"
+import { FcMusic } from "react-icons/fc";
+
 function Hero() {
   return (
     <div className="hero w-full mt-20">
@@ -38,7 +38,7 @@ function Hero() {
             <a href="https://whats-that-song.vercel.app/" target="_blank">
               {" "}
               <button className="mx-4 sm:mx-20 btn-grad">
-                <img src={walkman} height="100px" width="100px" className="mx-2 inline" />
+                <FcMusic className="mx-2 inline" />
                 Whats that song app
               </button>
             </a>
