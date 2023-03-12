@@ -7,10 +7,10 @@ function Hero() {
   return (
     <div className="hero w-full mt-20">
       <div className="hero-content flex flex-col md:flex-row-reverse">
-        <img
+       <div> <img
           src="../../assets/ai-hero-pic.png"
           className="max-w-sm rounded-xl shadow-lg md:w-1/2"
-        />
+        /></div>
         <div className="sm:ml-10 content">
           <h2 className="text-3xl sm:text-4xl font-bold font-mono mx-4 sm:mx-20">
             Free AI-Powered Tools for Students
