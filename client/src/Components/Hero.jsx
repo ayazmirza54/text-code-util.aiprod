@@ -38,7 +38,7 @@ function Hero() {
             <a href="https://whats-that-song.vercel.app/" target="_blank">
               {" "}
               <button className="mx-4 sm:mx-20 btn-grad">
-                <img src={walkman} className="mx-2 inline" />
+                <img src={walkman} height="100px" width="100px" className="mx-2 inline" />
                 Whats that song app
               </button>
             </a>
