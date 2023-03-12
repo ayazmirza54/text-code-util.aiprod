@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Link } from "react-router-dom";
 import { FaTools } from "react-icons/fa";
 import { FaFileImage } from "react-icons/fa";
+import walkman from "../assets/walkman.png"
 function Hero() {
   return (
     <div className="hero w-full mt-20">
@@ -32,6 +33,13 @@ function Hero() {
               <button className="mx-4 sm:mx-20 btn-grad">
                 <FaFileImage className="mx-2 inline" />
                 Browse img tools
+              </button>
+            </a>
+            <a href="https://whats-that-song.vercel.app/" target="_blank">
+              {" "}
+              <button className="mx-4 sm:mx-20 btn-grad">
+                <Image src={walkman} className="mx-2 inline" />
+                Whats that song app
               </button>
             </a>
             <br></br>
