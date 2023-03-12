@@ -13,7 +13,7 @@ function Header() {
                 className="w-10 h-10 link-img-h2"
                 src="../../assets/robot.png"
               />
-              <h2 className="text-xl sm:text-3xl font-bold mx-3 font-mono link-img-h2">
+              <h2 className="text-xl sm:text-3xl font-bold mx-3 font-mono link-img-h2 drop-shadow-xl">
                 Text/Code Utils.AI
               </h2>
             </Link>

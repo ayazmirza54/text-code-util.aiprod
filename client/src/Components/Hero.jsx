@@ -8,10 +8,10 @@ function Hero() {
     <div className="hero w-full mt-20">
       <div className="hero-content flex flex-col md:flex-row-reverse">
         <div className="sm:ml-10 content">
-          <h2 className="text-3xl sm:text-4xl font-bold font-mono mx-4 sm:mx-20">
+          <h2 className="text-3xl sm:text-4xl font-bold font-mono mx-4 sm:mx-20 drop-shadow-xl">
             Free AI-Powered Tools for Students
           </h2>
-          <p className="py-4 sm:py-6 font-mono mx-4 sm:mx-20 text-base sm:text-lg overflow-hidden">
+          <p className="py-4 sm:py-6 font-mono mx-4 sm:mx-20 text-base sm:text-lg overflow-hidden drop-shadow-xl">
             Save your time and brain energy by leveraging the power of
             Artificial Intelligence to automate tasks like generating study
             notes of any topic, extracting important points from any paragraph,
