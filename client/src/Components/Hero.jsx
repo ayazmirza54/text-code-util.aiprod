@@ -1,8 +1,8 @@
 import React from "react";
-import { BrowserRouter, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FaTools } from "react-icons/fa";
 import { FcMusic } from "react-icons/fc";
-
+import {FaFileImage} from "react-icons/fa"
 function Hero() {
   return (
     <div className="hero w-full mt-20">
