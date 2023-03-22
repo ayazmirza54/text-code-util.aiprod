@@ -10,7 +10,7 @@ function Bugfinder() {
     event.preventDefault();
     try {
       const response = await fetch(
-        "https://https://http-nodejs-production-2379.up.railway.app/bug-gen",
+        "https://my-ai-backend.onrender.com/bug-gen",
         {
           method: "POST",
           headers: {

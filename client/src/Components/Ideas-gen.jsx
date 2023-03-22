@@ -10,7 +10,7 @@ function Ideasgen() {
     event.preventDefault();
     try {
       const response = await fetch(
-        "https://https://http-nodejs-production-2379.up.railway.app/idea-gen",
+        "https://my-ai-backend.onrender.com/idea-gen",
         {
           method: "POST",
           headers: {

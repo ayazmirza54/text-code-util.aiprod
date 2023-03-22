@@ -10,7 +10,7 @@ function Articlewriter() {
     event.preventDefault();
     try {
       const response = await fetch(
-        "https://https://http-nodejs-production-2379.up.railway.app/article-gen",
+        "https://my-ai-backend.onrender.com/article-gen",
         {
           method: "POST",
           headers: {

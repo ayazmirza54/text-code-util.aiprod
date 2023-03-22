@@ -10,7 +10,7 @@ function Simplegen() {
     event.preventDefault();
     try {
       const response = await fetch(
-        "https://https://http-nodejs-production-2379.up.railway.app/simple-file-gen",
+        "https://my-ai-backend.onrender.com/simple-file-gen",
         {
           method: "POST",
           headers: {
