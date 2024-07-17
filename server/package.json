@@ -5,11 +5,12 @@
   "main": "script.js",
   "type": "module",
   "scripts": {
-    "server": "nodemon script.js"
+    "server": "nodemon server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@google/generative-ai": "^0.15.0",
     "body-parser": "^1.20.1",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",

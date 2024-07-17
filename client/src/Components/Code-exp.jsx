@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import Markdown from "react-markdown";
 function Codeexp() {
   // add state for input and chat tog
   const [codeInput, setcodeinput] = useState("");
@@ -8,16 +8,13 @@ function Codeexp() {
   async function handlesubmit(event) {
     event.preventDefault();
     try {
-      const response = await fetch(
-        "https://my-ai-backend.onrender.com/code-gen",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ code: codeInput }),
-        }
-      );
+      const response = await fetch("http://localhost:3080/code-gen", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ code: codeInput }),
+      });
 
       const data = await response.json();
       if (response.status !== 200) {
@@ -85,7 +82,9 @@ function Codeexp() {
             <h2 className="card-title">Response from AI</h2>
 
             <div className="card-actions ">
-              <div className="p-5 mockup-code font-mono">{result}</div>
+              <div className="p-5 mockup-code font-mono">
+                <Markdown>{result}</Markdown>
+              </div>
             </div>
           </div>
         </div>

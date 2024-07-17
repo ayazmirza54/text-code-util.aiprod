@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import Markdown from "react-markdown";
 function Sqlgen() {
   // add state for input and chat tog
   const [sqlInput, setsqlinput] = useState("");
@@ -8,16 +9,13 @@ function Sqlgen() {
   async function handlesubmit(event) {
     event.preventDefault();
     try {
-      const response = await fetch(
-        "https://my-ai-backend.onrender.com/sql-gen",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ sql: sqlInput }),
-        }
-      );
+      const response = await fetch("http://localhost:3080/sql-gen", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ sql: sqlInput }),
+      });
 
       const data = await response.json();
       if (response.status !== 200) {
@@ -85,7 +83,9 @@ function Sqlgen() {
             <h2 className="card-title">Response from AI</h2>
 
             <div className="card-actions ">
-              <div className="p-5 mockup-code font-mono">{result}</div>
+              <div className="p-5 mockup-code font-mono">
+                <Markdown>{result}</Markdown>
+              </div>
             </div>
           </div>
         </div>

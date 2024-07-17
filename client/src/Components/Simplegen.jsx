@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-
+import Markdown from "react-markdown";
 function Simplegen() {
   // add state for input and chat tog
   const [wordInput, setwordinput] = useState("");
@@ -9,16 +9,13 @@ function Simplegen() {
   async function handlesubmit(event) {
     event.preventDefault();
     try {
-      const response = await fetch(
-        "https://my-ai-backend.onrender.com/simple-file-gen",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ word: wordInput }),
-        }
-      );
+      const response = await fetch("http://localhost:3080/simple-file-gen", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ word: wordInput }),
+      });
 
       const data = await response.json();
       if (response.status !== 200) {
@@ -87,7 +84,9 @@ function Simplegen() {
             <h2 className="card-title">Response from AI</h2>
 
             <div className="card-actions">
-              <div>{result}</div>
+              <div>
+                <Markdown>{result}</Markdown>
+              </div>
             </div>
           </div>
         </div>

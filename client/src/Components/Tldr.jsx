@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-
+import Markdown from "react-markdown";
 function Tldr() {
   // add state for input and chat tog
   const [tldrInput, settldrinput] = useState("");
@@ -9,16 +9,13 @@ function Tldr() {
   async function handlesubmit(event) {
     event.preventDefault();
     try {
-      const response = await fetch(
-        "https://my-ai-backend.onrender.com/tldr-gen",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ tldr: tldrInput }),
-        }
-      );
+      const response = await fetch("http://localhost:3080/tldr-gen", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ tldr: tldrInput }),
+      });
 
       const data = await response.json();
       if (response.status !== 200) {
@@ -87,7 +84,9 @@ function Tldr() {
             <h2 className="card-title">Response from AI</h2>
 
             <div className="card-actions">
-              <div>{result}</div>
+              <div>
+                <Markdown>{result}</Markdown>
+              </div>
             </div>
           </div>
         </div>

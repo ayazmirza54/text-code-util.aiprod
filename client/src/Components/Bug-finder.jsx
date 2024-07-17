@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-
+import Markdown from "react-markdown";
 function Bugfinder() {
   // add state for input and chat tog
   const [bugInput, setbuginput] = useState("");
@@ -9,16 +9,13 @@ function Bugfinder() {
   async function handlesubmit(event) {
     event.preventDefault();
     try {
-      const response = await fetch(
-        "https://my-ai-backend.onrender.com/bug-gen",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ bug: bugInput }),
-        }
-      );
+      const response = await fetch("http://localhost:3080/bug-gen", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ bug: bugInput }),
+      });
 
       const data = await response.json();
       if (response.status !== 200) {
@@ -86,7 +83,9 @@ function Bugfinder() {
             <h2 className="card-title">Response from AI</h2>
 
             <div className="card-actions ">
-              <div className="p-5 mockup-code font-mono">{result}</div>
+              <div className="p-5 mockup-code font-mono">
+                <Markdown>{result}</Markdown>
+              </div>
             </div>
           </div>
         </div>

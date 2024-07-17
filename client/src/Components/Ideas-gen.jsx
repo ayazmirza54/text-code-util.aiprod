@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-
+import Markdown from "react-markdown";
 function Ideasgen() {
   // add state for input and chat tog
   const [ideaInput, setideainput] = useState("");
@@ -9,16 +9,13 @@ function Ideasgen() {
   async function handlesubmit(event) {
     event.preventDefault();
     try {
-      const response = await fetch(
-        "https://my-ai-backend.onrender.com/idea-gen",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ idea: ideaInput }),
-        }
-      );
+      const response = await fetch("http://localhost:3080/idea-gen", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ idea: ideaInput }),
+      });
 
       const data = await response.json();
       if (response.status !== 200) {
@@ -88,7 +85,9 @@ function Ideasgen() {
 
             <div className="card-actions">
               <div className="">
-                <code>{result}</code>
+                <code>
+                  <Markdown>{result}</Markdown>
+                </code>
               </div>
             </div>
           </div>
