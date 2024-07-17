@@ -84,7 +84,7 @@ function Articlewriter() {
       <br></br>
       <br></br>
       <center>
-        <div className="card w-full text-2xl flex flex-auto justify-center shadow-xl">
+        <div className="card w-full flex flex-auto justify-center shadow-xl">
           <div className="card-body">
             <h2 className="card-title">Response from AI</h2>
             <center>  <div className="card-actions">

@@ -85,7 +85,7 @@ function Tldr() {
       <br></br>
       <center>
         {" "}
-        <div className="card text-2xl flex flex-auto justify-center shadow-xl">
+        <div className="card flex flex-auto justify-center shadow-xl">
           <div className="card-body">
             <h2 className="card-title">Response from AI</h2>
 

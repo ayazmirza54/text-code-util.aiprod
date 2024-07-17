@@ -85,7 +85,7 @@ function Ideasgen() {
       <br></br>
       <center>
         {" "}
-        <div className="card w-full text-2xl flex justify-start shadow-xl">
+        <div className="card w-full flex justify-start shadow-xl">
           <div className="card-body">
             <h2 className="card-title">Response from AI</h2>
 
