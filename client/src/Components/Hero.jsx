@@ -17,14 +17,14 @@ function Hero() {
             notes of any topic, extracting important points from any paragraph,
             generating questions in seconds and much more for free by using the
             tools offered by AI Text Tools.
-          </p>
+          </p><center>
           <Link to="/tools">
             <button className="mx-4 sm:mx-20 btn-grad">
               <FaTools className="mx-2 inline" />
               Browse tools
             </button>
-          </Link>
-            <a href="https://my-restore-photos-omega.vercel.app/" target="_blank">
+          </Link></center>
+            {/* <a href="https://my-restore-photos-omega.vercel.app/" target="_blank">
               {" "}
               <button className="mx-4 sm:mx-20 btn-grad">
                 <FaFileImage className="mx-2 inline" />
@@ -37,7 +37,7 @@ function Hero() {
                 <FcMusic className="mx-2 inline" />
                 Whats that song app
               </button>
-            </a>
+            </a> */}
             <br></br>
             <br></br>
          <center>   <h2>🔥Top tools this week</h2>
