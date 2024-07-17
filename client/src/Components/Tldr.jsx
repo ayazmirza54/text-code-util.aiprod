@@ -9,13 +9,16 @@ function Tldr() {
   async function handlesubmit(event) {
     event.preventDefault();
     try {
-      const response = await fetch("http://localhost:3080/tldr-gen", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ tldr: tldrInput }),
-      });
+      const response = await fetch(
+        "https://text-code-util-aiprod.onrender.com/tldr-gen",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ tldr: tldrInput }),
+        }
+      );
 
       const data = await response.json();
       if (response.status !== 200) {

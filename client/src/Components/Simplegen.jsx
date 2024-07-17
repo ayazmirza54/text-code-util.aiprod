@@ -9,13 +9,16 @@ function Simplegen() {
   async function handlesubmit(event) {
     event.preventDefault();
     try {
-      const response = await fetch("http://localhost:3080/simple-file-gen", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ word: wordInput }),
-      });
+      const response = await fetch(
+        "https://text-code-util-aiprod.onrender.com/simple-file-gen",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ word: wordInput }),
+        }
+      );
 
       const data = await response.json();
       if (response.status !== 200) {

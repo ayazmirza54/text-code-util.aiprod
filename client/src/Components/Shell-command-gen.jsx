@@ -9,13 +9,16 @@ function Shellcommandgen() {
   async function handlesubmit(event) {
     event.preventDefault();
     try {
-      const response = await fetch("http://localhost:3080/shell-command-gen", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ cmd: cmdInput }),
-      });
+      const response = await fetch(
+        "https://text-code-util-aiprod.onrender.com/shell-command-gen",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ cmd: cmdInput }),
+        }
+      );
 
       const data = await response.json();
       if (response.status !== 200) {
