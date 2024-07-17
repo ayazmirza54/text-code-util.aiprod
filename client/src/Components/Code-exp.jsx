@@ -4,7 +4,7 @@ function Codeexp() {
   // add state for input and chat tog
   const [codeInput, setcodeinput] = useState("");
   const [result, setResult] = useState();
-  const [loading, setLoading] = useState(false); 
+  const [loading, setLoading] = useState(false);
   async function handlesubmit(event) {
     event.preventDefault();
     setLoading(true);
@@ -34,7 +34,7 @@ function Codeexp() {
       // Consider implementing your own error handling logic here
       console.error(error);
       alert(error.message);
-    }finally {
+    } finally {
       setLoading(false); // Set loading to false when the request completes
     }
   }
@@ -61,7 +61,7 @@ function Codeexp() {
             value={codeInput}
             onChange={(e) => setcodeinput(e.target.value)}
             className="h-40 py-2 px-4 rounded-lg 
-         shadow-xl text-2xl text-white bg-black sm:w-full md:w-3/4 "
+         shadow-xl  text-white bg-black sm:w-full md:w-3/4 "
           />
         </center>
         <br></br>
@@ -89,13 +89,13 @@ function Codeexp() {
 
             <div className="card-actions ">
               <div className="p-5 mockup-code font-mono">
-              {loading ? (
-              <div className="loader"></div>  
-              ) : (
-                <div>
-                  <Markdown>{result}</Markdown>
-                </div>
-              )}
+                {loading ? (
+                  <div className="loader"></div>
+                ) : (
+                  <div>
+                    <Markdown>{result}</Markdown>
+                  </div>
+                )}
               </div>
             </div>
           </div>

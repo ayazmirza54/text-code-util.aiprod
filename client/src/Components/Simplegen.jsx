@@ -5,7 +5,7 @@ function Simplegen() {
   // add state for input and chat tog
   const [wordInput, setwordinput] = useState("");
   const [result, setResult] = useState();
-  const [loading, setLoading] = useState(false); 
+  const [loading, setLoading] = useState(false);
   async function handlesubmit(event) {
     event.preventDefault();
     setLoading(true);
@@ -35,7 +35,7 @@ function Simplegen() {
       // Consider implementing your own error handling logic here
       console.error(error);
       alert(error.message);
-    }finally {
+    } finally {
       setLoading(false); // Set loading to false when the request completes
     }
   }
@@ -62,7 +62,7 @@ function Simplegen() {
             value={wordInput}
             onChange={(e) => setwordinput(e.target.value)}
             className=" h-40 py-2 px-4 rounded-lg 
-        md:w-3/4 sm:w-full shadow-xl text-2xl text-white bg-black  "
+        md:w-3/4 sm:w-full shadow-xl  text-white bg-black  "
           />
         </center>
         <br></br>
@@ -91,13 +91,13 @@ function Simplegen() {
 
             <div className="card-actions">
               <div>
-              {loading ? (
-              <div className="loader"></div>  
-              ) : (
-                <div>
-                  <Markdown>{result}</Markdown>
-                </div>
-              )}
+                {loading ? (
+                  <div className="loader"></div>
+                ) : (
+                  <div>
+                    <Markdown>{result}</Markdown>
+                  </div>
+                )}
               </div>
             </div>
           </div>

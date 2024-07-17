@@ -5,7 +5,7 @@ function Shellcommandgen() {
   // add state for input and chat tog
   const [cmdInput, setcmdinput] = useState("");
   const [result, setResult] = useState();
-  const [loading, setLoading] = useState(false); 
+  const [loading, setLoading] = useState(false);
   async function handlesubmit(event) {
     event.preventDefault();
     setLoading(true);
@@ -35,7 +35,7 @@ function Shellcommandgen() {
       // Consider implementing your own error handling logic here
       console.error(error);
       alert(error.message);
-    }finally {
+    } finally {
       setLoading(false); // Set loading to false when the request completes
     }
   }
@@ -62,7 +62,7 @@ function Shellcommandgen() {
             value={cmdInput}
             onChange={(e) => setcmdinput(e.target.value)}
             className=" h-40 py-2 px-4 rounded-lg 
-        md:w-3/4 sm:w-full shadow-xl text-2xl text-white bg-black  "
+        md:w-3/4 sm:w-full shadow-xl  text-white bg-black  "
           />
         </center>
         <br></br>
@@ -90,13 +90,13 @@ function Shellcommandgen() {
 
             <div className="card-actions ">
               <div className="p-5 mockup-code font-mono">
-              {loading ? (
-              <div className="loader"></div>  
-              ) : (
-                <div>
-                  <Markdown>{result}</Markdown>
-                </div>
-              )}
+                {loading ? (
+                  <div className="loader"></div>
+                ) : (
+                  <div>
+                    <Markdown>{result}</Markdown>
+                  </div>
+                )}
               </div>
             </div>
           </div>

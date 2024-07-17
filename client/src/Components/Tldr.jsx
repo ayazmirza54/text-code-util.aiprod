@@ -35,7 +35,7 @@ function Tldr() {
       // Consider implementing your own error handling logic here
       console.error(error);
       alert(error.message);
-    }finally {
+    } finally {
       setLoading(false); // Set loading to false when the request completes
     }
   }
@@ -62,7 +62,7 @@ function Tldr() {
             value={tldrInput}
             onChange={(e) => settldrinput(e.target.value)}
             className=" h-40 py-2 px-4 rounded-lg 
-        md:w-3/4 sm:w-full shadow-xl text-2xl text-white bg-black  "
+        md:w-3/4 sm:w-full shadow-xl text-white bg-black  "
           />
         </center>
         <br></br>
@@ -91,13 +91,13 @@ function Tldr() {
 
             <div className="card-actions">
               <div>
-              {loading ? (
-              <div className="loader"></div>  
-              ) : (
-                <div>
-                  <Markdown>{result}</Markdown>
-                </div>
-              )}
+                {loading ? (
+                  <div className="loader"></div>
+                ) : (
+                  <div>
+                    <Markdown>{result}</Markdown>
+                  </div>
+                )}
               </div>
             </div>
           </div>
