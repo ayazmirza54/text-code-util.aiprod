@@ -5,9 +5,10 @@ function Bugfinder() {
   // add state for input and chat tog
   const [bugInput, setbuginput] = useState("");
   const [result, setResult] = useState();
-
+  const [loading, setLoading] = useState(false); // New loading state
   async function handlesubmit(event) {
     event.preventDefault();
+    setLoading(true);
     try {
       const response = await fetch(
         "https://text-code-util-aiprod.onrender.com/bug-gen",
@@ -34,6 +35,8 @@ function Bugfinder() {
       // Consider implementing your own error handling logic here
       console.error(error);
       alert(error.message);
+    } finally {
+      setLoading(false); // Set loading to false when the request completes
     }
   }
 
@@ -65,7 +68,7 @@ function Bugfinder() {
         <br></br>
         <br></br>
         <br></br>
-        <div className="flex justify-center gap-">
+        <div className="flex justify-center gap-8">
           {" "}
           <img
             className="svg-styles w-14 h-14 rounded-md"
@@ -74,7 +77,7 @@ function Bugfinder() {
           <input
             type="submit"
             value="Find out bug in above code"
-            className="ml-4 py-2 px-4 bg-green-500  rounded-lg hover:bg-green-600"
+            className="ml-4 py-2 px-4 bg-green-500  rounded-lg hover:bg-green-600 cursor-pointer"
           />
         </div>{" "}
       </form>
@@ -87,7 +90,13 @@ function Bugfinder() {
 
             <div className="card-actions ">
               <div className="p-5 mockup-code font-mono">
-                <Markdown>{result}</Markdown>
+              {loading ? (
+              <div className="loader"></div>  
+              ) : (
+                <div>
+                  <Markdown>{result}</Markdown>
+                </div>
+              )}
               </div>
             </div>
           </div>

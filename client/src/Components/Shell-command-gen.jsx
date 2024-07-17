@@ -5,9 +5,10 @@ function Shellcommandgen() {
   // add state for input and chat tog
   const [cmdInput, setcmdinput] = useState("");
   const [result, setResult] = useState();
-
+  const [loading, setLoading] = useState(false); 
   async function handlesubmit(event) {
     event.preventDefault();
+    setLoading(true);
     try {
       const response = await fetch(
         "https://text-code-util-aiprod.onrender.com/shell-command-gen",
@@ -34,6 +35,8 @@ function Shellcommandgen() {
       // Consider implementing your own error handling logic here
       console.error(error);
       alert(error.message);
+    }finally {
+      setLoading(false); // Set loading to false when the request completes
     }
   }
 
@@ -74,7 +77,7 @@ function Shellcommandgen() {
           <input
             type="submit"
             value="Generate shell command"
-            className="ml-4 py-2 px-4 bg-green-500  rounded-lg hover:bg-green-600"
+            className="ml-4 py-2 px-4 bg-green-500  rounded-lg hover:bg-green-600 cursor-pointer"
           />
         </div>{" "}
       </form>
@@ -87,7 +90,13 @@ function Shellcommandgen() {
 
             <div className="card-actions ">
               <div className="p-5 mockup-code font-mono">
-                <Markdown>{result}</Markdown>
+              {loading ? (
+              <div className="loader"></div>  
+              ) : (
+                <div>
+                  <Markdown>{result}</Markdown>
+                </div>
+              )}
               </div>
             </div>
           </div>

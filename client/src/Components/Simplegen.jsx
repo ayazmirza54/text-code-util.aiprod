@@ -5,9 +5,10 @@ function Simplegen() {
   // add state for input and chat tog
   const [wordInput, setwordinput] = useState("");
   const [result, setResult] = useState();
-
+  const [loading, setLoading] = useState(false); 
   async function handlesubmit(event) {
     event.preventDefault();
+    setLoading(true);
     try {
       const response = await fetch(
         "https://text-code-util-aiprod.onrender.com/simple-file-gen",
@@ -34,6 +35,8 @@ function Simplegen() {
       // Consider implementing your own error handling logic here
       console.error(error);
       alert(error.message);
+    }finally {
+      setLoading(false); // Set loading to false when the request completes
     }
   }
 
@@ -65,7 +68,7 @@ function Simplegen() {
         <br></br>
         <br></br>
         <br></br>
-        <div className="flex justify-center gap-">
+        <div className="flex justify-center gap-8">
           {" "}
           <img
             className="svg-styles w-14 h-14 rounded-md"
@@ -74,7 +77,7 @@ function Simplegen() {
           <input
             type="submit"
             value="Generate simple word"
-            className="ml-4 py-2 px-4 bg-green-500  rounded-lg hover:bg-green-600"
+            className="ml-4 py-2 px-4 bg-green-500  rounded-lg hover:bg-green-600 cursor-pointer"
           />
         </div>{" "}
       </form>
@@ -88,7 +91,13 @@ function Simplegen() {
 
             <div className="card-actions">
               <div>
-                <Markdown>{result}</Markdown>
+              {loading ? (
+              <div className="loader"></div>  
+              ) : (
+                <div>
+                  <Markdown>{result}</Markdown>
+                </div>
+              )}
               </div>
             </div>
           </div>
