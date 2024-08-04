@@ -21,7 +21,7 @@ Google Gemini API for AI-powered functionalities
 
 ## Deployment
 
-Once I finished developing the application, I needed to deploy it. I decided to use Vercel and Railway for deployment, as they offer easy and secure hosting. Using Vercel and Railway, I was able to quickly deploy the application and make it available to the public.
+Once I finished developing the application, I needed to deploy it. I decided to use Vercel and Render for deployment, as they offer easy and secure hosting. Using Vercel and Render, I was able to quickly deploy the application and make it available to the public.
 
 Github Link : [Github Link](https://github.com/ayazmirza54/text-code-util.aiprod)
 
