@@ -56,7 +56,7 @@ function Sqlgen() {
         <div className="mb-6">
           <textarea
             name="sql"
-            placeholder="Enter a prompt to get the shell command"
+            placeholder="Enter a prompt to get the sql query for the same."
             value={sqlInput}
             onChange={(e) => setsqlinput(e.target.value)}
             className="w-full h-40 py-2 px-4 rounded-lg shadow-xl text-white bg-black resize-none"

@@ -59,7 +59,7 @@ function Articlewriter() {
     <div className="mb-6">
       <textarea
         name="article"
-        placeholder="Enter a topic you want to understand in simple articles"
+        placeholder="Enter a topic you want to generate an article for the same."
         value={articleInput}
         onChange={(e) => setarticleinput(e.target.value)}
         className="w-full h-40 py-2 px-4 rounded-lg shadow-xl text-white bg-black resize-none"
