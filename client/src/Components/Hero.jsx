@@ -56,7 +56,7 @@ function Hero() {
             {" "}
             <img
               className="svg-styles w-14 h-14 rounded-md"
-              src="../../assets/article-writer.svg"
+              src="../../assets/ideas.svg"
             ></img>
             <h2 className="text-xl">Ideas generator</h2>
           </div>

@@ -46,7 +46,7 @@ function Simplegen() {
       <div className="flex flex-col items-center mb-8">
         <img
           className="w-14 h-14 rounded-md mb-4"
-          src="../../assets/ideas.svg"
+          src="../../assets/idea.svg"
           alt="Ideas"
         />
         <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-center">Any text to simple Words</h2>

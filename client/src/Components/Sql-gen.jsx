@@ -49,7 +49,7 @@ function Sqlgen() {
           src="../../assets/code.svg"
           alt="Code"
         />
-        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-center">Shell command generator</h2>
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-center">AI SQL generator</h2>
       </div>
 
       <form onSubmit={handlesubmit} className="mb-8">
@@ -73,7 +73,7 @@ function Sqlgen() {
             type="submit"
             className="py-2 px-4 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors duration-300 w-full sm:w-auto"
           >
-            Generate Shell Command
+            Generate SQL Query
           </button>
         </div>
       </form>

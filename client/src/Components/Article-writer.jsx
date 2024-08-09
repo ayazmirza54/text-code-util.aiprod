@@ -48,7 +48,7 @@ function Articlewriter() {
     <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
       <img
         className="w-14 h-14 rounded-md"
-        src="../../assets/article-writer.svg"
+        src="../../assets/article.svg"
         alt="Article Writer Icon"
       />
       <h2 className="text-xl sm:text-2xl md:text-3xl text-center sm:text-left">Any topic to an article</h2>

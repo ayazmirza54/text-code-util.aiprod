@@ -46,7 +46,7 @@ function Tldr() {
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
         <img
           className="w-14 h-14 rounded-md"
-          src="../../assets/ideas.svg"
+          src="../../assets/article-writer.svg"
           alt="Ideas"
         />
         <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-center">Summarize anything</h2>
