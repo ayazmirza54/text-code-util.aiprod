@@ -43,62 +43,59 @@ function Articlewriter() {
 
   return (
     <>
-      <br></br>
-      <div className="flex justify-center gap-8">
-        <img
-          className="svg-styles w-14 h-14 rounded-md"
-          src="../../assets/article-writer.svg"
-          alt="Article Writer Icon"
-        ></img>
-        <h2 className="text-xl">Any topic to an article</h2>
-      </div>
-      <br></br>
-      <br></br>
-      <form onSubmit={handlesubmit}>
-        <center>
-          <input
-            type="text"
-            name="article"
-            placeholder="Enter a topic you want to understand in simple articles"
-            value={articleInput}
-            onChange={(e) => setarticleinput(e.target.value)}
-            className="h-40 py-2 px-4 rounded-lg shadow-xl text-white bg-black w-full"
-          />
-        </center>
-        <br></br>
-        <br></br>
-        <br></br>
-        <div className="flex justify-center gap-8">
-          <img
-            className="svg-styles w-14 h-14 rounded-md"
-            src="../../assets/robot-svgrepo-com.svg"
-            alt="Robot Icon"
-          ></img>
-          <input
-            type="submit"
-            value="Generate article"
-            className="ml-4 py-2 px-4 bg-green-500  rounded-lg hover:bg-green-600 cursor-pointer"
-          />
-        </div>
-      </form>
-      <br></br>
-      <br></br>
-      <center>
-        <div className="card w-full flex flex-auto justify-center shadow-xl">
-          <div className="card-body">
-            <h2 className="card-title">Response from AI</h2>
-            <center>  <div className="card-actions">
-              {loading ? (
-              <div className="loader"></div>  
-              ) : (
-                <div>
-                  <Markdown>{result}</Markdown>
-                </div>
-              )}
-            </div></center>
+      <div className="container mx-auto px-4 md:px-8 lg:px-16">
+  <div className="my-8">
+    <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
+      <img
+        className="w-14 h-14 rounded-md"
+        src="../../assets/article-writer.svg"
+        alt="Article Writer Icon"
+      />
+      <h2 className="text-xl sm:text-2xl md:text-3xl text-center sm:text-left">Any topic to an article</h2>
+    </div>
+  </div>
+
+  <form onSubmit={handlesubmit} className="mb-8">
+    <div className="mb-6">
+      <textarea
+        name="article"
+        placeholder="Enter a topic you want to understand in simple articles"
+        value={articleInput}
+        onChange={(e) => setarticleinput(e.target.value)}
+        className="w-full h-40 py-2 px-4 rounded-lg shadow-xl text-white bg-black resize-none"
+      />
+    </div>
+
+    <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
+      <img
+        className="w-14 h-14 rounded-md"
+        src="../../assets/robot-svgrepo-com.svg"
+        alt="Robot Icon"
+      />
+      <button
+        type="submit"
+        className="w-full sm:w-auto py-2 px-4 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors duration-300 cursor-pointer"
+      >
+        Generate article
+      </button>
+    </div>
+  </form>
+
+  <div className="card w-full shadow-xl bg-white dark:bg-gray-800">
+    <div className="card-body p-6">
+      <h2 className="card-title text-xl sm:text-2xl md:text-3xl mb-4">Response from AI</h2>
+      <div className="card-actions">
+        {loading ? (
+          <div className="loader mx-auto"></div>  
+        ) : (
+          <div className="prose dark:prose-invert max-w-none">
+            <Markdown>{result}</Markdown>
           </div>
-        </div>
-      </center>
+        )}
+      </div>
+    </div>
+  </div>
+</div>
     </>
   );
 }

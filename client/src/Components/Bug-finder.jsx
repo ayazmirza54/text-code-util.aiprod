@@ -42,66 +42,59 @@ function Bugfinder() {
 
   return (
     <>
-      <br></br>
-      <div className="flex justify-center gap-8">
-        <img
-          className="svg-styles w-14 h-14 rounded-md"
-          src="../../assets/bug-fix.svg"
-        ></img>
-        <h2 className="text-xl">Bug finder</h2>
-      </div>
-      <br></br>
-      <br></br>
-      <form onSubmit={handlesubmit}>
-        <center>
-          {" "}
-          <input
-            type="text"
-            name="bug"
-            placeholder="Enter a code to find bug in it"
-            value={bugInput}
-            onChange={(e) => setbuginput(e.target.value)}
-            className=" h-40 py-2 px-4 rounded-lg 
-        shadow-xl text-white bg-black w-full"
-          />
-        </center>
-        <br></br>
-        <br></br>
-        <br></br>
-        <div className="flex justify-center gap-8">
-          {" "}
-          <img
-            className="svg-styles w-14 h-14 rounded-md"
-            src="../../assets/robot-svgrepo-com.svg"
-          ></img>
-          <input
-            type="submit"
-            value="Find out bug in above code"
-            className="ml-4 py-2 px-4 bg-green-500  rounded-lg hover:bg-green-600 cursor-pointer"
-          />
-        </div>{" "}
-      </form>
-      <br></br>
-      <br></br>
-      <div className="flex items-center justify-center self-center">
-        <div className="mx-auto my-auto">
-          <div className="card-body">
-            <h2 className="card-title">Response from AI</h2>
+      <div className="container mx-auto px-4 md:px-8 lg:px-16 my-8">
+  <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 mb-8">
+    <img
+      className="w-14 h-14 rounded-md"
+      src="../../assets/bug-fix.svg"
+      alt="Bug Fix Icon"
+    />
+    <h2 className="text-xl sm:text-2xl md:text-3xl">Bug finder</h2>
+  </div>
 
-            <div className="card-actions ">
-              <div className="p-5 mockup-code font-mono">
-              {loading ? (
-              <div className="loader"></div>  
-              ) : (
-                <div>
-                  <Markdown>{result}</Markdown>
-                </div>
-              )}
-              </div>
+  <form onSubmit={handlesubmit} className="mb-8">
+    <div className="mb-6">
+      <textarea
+        name="bug"
+        placeholder="Enter a code to find bug in it"
+        value={bugInput}
+        onChange={(e) => setbuginput(e.target.value)}
+        className="w-full h-40 py-2 px-4 rounded-lg shadow-xl text-white bg-black resize-none"
+      />
+    </div>
+
+    <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
+      <img
+        className="w-14 h-14 rounded-md"
+        src="../../assets/robot-svgrepo-com.svg"
+        alt="Robot Icon"
+      />
+      <button
+        type="submit"
+        className="w-full sm:w-auto py-2 px-4 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors duration-300 cursor-pointer"
+      >
+        Find out bug in above code
+      </button>
+    </div>
+  </form>
+
+  <div className="card w-full shadow-xl bg-white dark:bg-gray-800">
+    <div className="card-body p-6">
+      <h2 className="card-title text-xl sm:text-2xl md:text-3xl mb-4">Response from AI</h2>
+      <div className="card-actions">
+        <div className="w-full p-4 mockup-code font-mono overflow-x-auto">
+          {loading ? (
+            <div className="loader mx-auto"></div>  
+          ) : (
+            <div className="prose dark:prose-invert max-w-none">
+              <Markdown>{result}</Markdown>
             </div>
-          </div>
+          )}
         </div>
       </div>
+    </div>
+  </div>
+</div>
     </>
   );
 }

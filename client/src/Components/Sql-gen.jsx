@@ -42,66 +42,59 @@ function Sqlgen() {
 
   return (
     <>
-      <br></br>
-      <div className="flex justify-center gap-8">
+      <div className="container mx-auto px-4 py-8">
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
         <img
-          className="svg-styles w-14 h-14 rounded-md"
+          className="w-14 h-14 rounded-md"
           src="../../assets/code.svg"
-        ></img>
-        <h2 className="text-xl">Shell command generator</h2>
+          alt="Code"
+        />
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-center">Shell command generator</h2>
       </div>
-      <br></br>
-      <br></br>
-      <form onSubmit={handlesubmit}>
-        <center>
-          {" "}
-          <input
-            type="text"
+
+      <form onSubmit={handlesubmit} className="mb-8">
+        <div className="mb-6">
+          <textarea
             name="sql"
-            placeholder="Enter an propt to get the sql query for the same"
+            placeholder="Enter a prompt to get the shell command"
             value={sqlInput}
             onChange={(e) => setsqlinput(e.target.value)}
-            className=" h-40 py-2 px-4 rounded-lg 
-        md:w-3/4 sm:w-full shadow-xl  text-white bg-black "
+            className="w-full h-40 py-2 px-4 rounded-lg shadow-xl text-white bg-black resize-none"
           />
-        </center>
-        <br></br>
-        <br></br>
-        <br></br>
-        <div className="flex justify-center gap-">
-          {" "}
-          <img
-            className="svg-styles w-14 h-14 rounded-md"
-            src="../../assets/robot-svgrepo-com.svg"
-          ></img>
-          <input
-            type="submit"
-            value="Generate SQL query"
-            className="ml-4 py-2 px-4 bg-green-500  rounded-lg hover:bg-green-600 cursor-pointer"
-          />
-        </div>{" "}
-      </form>
-      <br></br>
-      <br></br>
-      <div className="flex items-center justify-center self-center">
-        <div className="mx-auto my-auto">
-          <div className="card-body">
-            <h2 className="card-title">Response from AI</h2>
+        </div>
 
-            <div className="card-actions ">
-              <div className="p-5 mockup-code font-mono">
-                {loading ? (
-                  <div className="loader"></div>
-                ) : (
-                  <div>
-                    <Markdown>{result}</Markdown>
-                  </div>
-                )}
-              </div>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <img
+            className="w-14 h-14 rounded-md"
+            src="../../assets/robot-svgrepo-com.svg"
+            alt="Robot"
+          />
+          <button
+            type="submit"
+            className="py-2 px-4 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors duration-300 w-full sm:w-auto"
+          >
+            Generate Shell Command
+          </button>
+        </div>
+      </form>
+
+      <div className="card w-full shadow-xl bg-white dark:bg-gray-800">
+    <div className="card-body p-6">
+      <h2 className="card-title text-xl sm:text-2xl md:text-3xl mb-4">Response from AI</h2>
+      <div className="card-actions">
+        <div className="w-full p-4 mockup-code font-mono overflow-x-auto">
+          {loading ? (
+            <div className="loader mx-auto"></div>  
+          ) : (
+            <div className="prose dark:prose-invert max-w-none">
+              <Markdown>{result}</Markdown>
             </div>
-          </div>
+          )}
         </div>
       </div>
+    </div>
+  </div>
+    </div>
     </>
   );
 }
