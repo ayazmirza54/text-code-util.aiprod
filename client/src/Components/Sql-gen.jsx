@@ -78,7 +78,7 @@ function Sqlgen() {
         </div>
       </form>
 
-      <div className="card w-full shadow-xl bg-white dark:bg-gray-800">
+      <div className="card w-full shadow-xl bg-gray-800">
     <div className="card-body p-6">
       <h2 className="card-title text-xl sm:text-2xl md:text-3xl mb-4">Response from AI</h2>
       <div className="card-actions">
